@@ -1,0 +1,2 @@
+# demo-set
+all demos
