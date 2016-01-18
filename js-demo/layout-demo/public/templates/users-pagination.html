@@ -1,0 +1,15 @@
+<ul class="pagination" style="margin:auto 0;right:25px;position:absolute;">
+    {{#unless isFirstGroup}}
+    <li><a onclick="navigateTo({{lastGroup}})" href="javascript:void(0);">&laquo;</a></li>
+    {{/unless}}
+    {{#each pages}}
+    {{#if isCurrentPage}}
+    <li class="active"><span>{{this.page}}</span></li>
+    {{else}}
+    <li><a onclick="navigateTo({{this.page}});" href="javascript:void(0);">{{this.page}}</a></li>
+    {{/if}}
+    {{/each}}
+    {{#unless isLastGroup}}
+    <li><a onclick="navigateTo({{nextGroup}});" href="javascript:void(0);">&raquo;</a></li>
+    {{/unless}}
+</ul>

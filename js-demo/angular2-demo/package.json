@@ -1,0 +1,13 @@
+{
+  "name": "angular2-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  },
+  "keywords": [],
+  "dependencies": {
+    "angular2": "2.0.0-alpha.45",
+    "systemjs": "0.19.2"
+  }
+}

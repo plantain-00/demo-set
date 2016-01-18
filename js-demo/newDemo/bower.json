@@ -1,0 +1,19 @@
+{
+  "name": "newDemo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/plantain-00/javascript-demo",
+  "description": "a new demo",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

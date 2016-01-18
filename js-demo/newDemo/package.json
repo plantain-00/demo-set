@@ -1,0 +1,20 @@
+{
+  "name": "newDemo",
+  "version": "1.0.0",
+  "description": "a new demo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "bignum": "^0.11.0",
+    "mongoose": "^4.1.8"
+  }
+}

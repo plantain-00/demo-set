@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+</head>
+<body>
+<p>
+    name:
+    <input data-bind="value: name"/>
+</p>
+
+<p>
+    age:
+    <input data-bind="value: age"/>
+</p>
+<button data-bind="click:recieve">recieve</button>
+<button data-bind="click:send">send</button>
+<script type="text/javascript">
+    var ViewModel = function () {
+        this.name = ko.observable();
+        this.age = ko.observable();
+        this.send = function () {
+            var js = ko.toJS(this);
+            var json = ko.toJSON(this);
+            alert(json);
+        };
+        this.recieve = function () {
+            var json = JSON.parse('{"name":"TestName","age":12}');
+            this.name(json.name);
+            this.age(json.age);
+        };
+    };
+    ko.applyBindings(new ViewModel());
+</script>
+</body>
+</html>

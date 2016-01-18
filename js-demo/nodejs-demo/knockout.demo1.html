@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+</head>
+<body>
+The name is
+<input data-bind="value: personName"></span>
+<button onclick="showName()">show name</button>
+<script type="text/javascript">
+    var myViewModel = {
+        personName: ko.observable('Bob'),
+        personAge: ko.observable(123)
+    };
+    ko.applyBindings(myViewModel);
+
+
+    myViewModel.personName('sss');
+    function showName() {
+        alert(myViewModel.personName());
+    }
+</script>
+</body>
+</html>
