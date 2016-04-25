@@ -1,0 +1,15 @@
+{
+  "name": "grpc-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "tsc client.ts && node client.js",
+    "server": "tsc server.ts && node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc": "^0.13.2-pre1"
+  }
+}
