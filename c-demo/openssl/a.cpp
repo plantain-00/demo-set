@@ -1,17 +1,21 @@
-#include <stdio.h>
+#include <iostream>
 #include <string>
 #include <openssl/md5.h>
 
-int main()
+std::string md5(std::string raw)
 {
     unsigned char digest[MD5_DIGEST_LENGTH];
-    std::string raw("happy");
     MD5((unsigned char *)(raw.c_str()), raw.length(), (unsigned char *)&digest);
-    char result[33];
+    char result[2 * MD5_DIGEST_LENGTH + 1];
     for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
     {
         sprintf(&result[i * 2], "%02x", (unsigned int)digest[i]);
     }
-    printf("md5 digest: %s\n", result);
+    return result;
+}
+
+int main()
+{
+    std::cout << md5("happy");
     return 0;
 }
