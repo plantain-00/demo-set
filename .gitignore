@@ -3,3 +3,4 @@ debug
 release
 js-demo/tesseract.js-demo/node_modules
 *.traineddata
+c-demo/openssl/.vscode
